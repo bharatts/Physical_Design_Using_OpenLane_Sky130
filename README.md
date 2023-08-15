@@ -5,6 +5,8 @@ Physical Design or PnR (Place and Route) is the core of any IC design cycle. Fro
 With the announcement of Google-SkyWater’s first manufacturable open source 130nm process design kit (pdk), open source EDA world is no longer limited in scope to academic research and small scale projects only. This along with the conception of Openlane flow, a fully-automated RTL2GDSII flow, has made the dream of “an IC for all” a near reality.
 So here’s announcing the ultimate workshop on SoC design planning in Openlane flow using the latest Google-SkyWater 130nm process node.
 
+![vsd_logo](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/vsd_logo.jpg)
+
 - Day1 : Inception of open-source EDA, OpenLANE and Sky130 PDK
   * How to talk to computers
   * SoC design and OpenLANE
@@ -27,3 +29,26 @@ So here’s announcing the ultimate workshop on SoC design planning in Openlane 
 - Day 5 : Final steps for RTL2GDS
   * Routing and design rule check (DRC)
   * PNR interactive flow tutorial
+
+# Day 1 : Inception of open-source EDA
+
+OpenLANE is a completely automated RTL to GDSII flow which embeds in it different opensource tools, namely, OpenROAD, Yosys, ABC, Magic etc., apart from many custom methodology scripts for design exploration and optimization. Openlane is built around Skywater 130nm process node and is capable of performing full ASIC implementation steps from RTL all the way down to GDSII. The flow-chart below gives a better picture of openlane flow as a whole (Image Courtesy: efabless/openlane)
+
+![flow](https://raw.githubusercontent.com/nickson-jose/vsdstdcelldesign/master/Images/openlane.flow.1.png)
+
+### Invoking Openlane
+![openlane_invoke]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
