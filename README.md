@@ -141,4 +141,12 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
 ![rise_fall_time](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/rise_and_fall_trans_delay_day3.jpg)
 
+# Day 4 : Pre-layout timing analysis and importance of good clock tree
 
+# Day 5 : Final steps for RTL2GDS
+
+
+# ACKNOWLEDGEMENT
+- Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
+- Nickson Jose
+- Ahmed Ghazy, openlane team, efabless
