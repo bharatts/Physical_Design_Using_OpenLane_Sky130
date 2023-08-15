@@ -163,10 +163,13 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
   ![lef file location](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/day4_lef_file.jpg)
 
   - lef file
-  ![lef_file]()
+  ![lef_file](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/vsdinv_lef_file_day4.jpg)
 
 
+  - After creating lef file, we need to cp .lef and .lib file from our clone stdcell design repo to design i.e picorv32a/src
+  ``` cp ~/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/sky130_vsd.lef ~/Desktop/work/tools/openlane_working_dir/openlane/vsdstdcelldesign/libs/sky130_fd* ~/Desktop/work/tools/openlane_working_dir/openlane/designspicorv32a/src/.```
 
+  ![copying](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/day4_copying_lef_tech_file_from_vsdcell%20to%20design_src.jpg)
 
 
 
