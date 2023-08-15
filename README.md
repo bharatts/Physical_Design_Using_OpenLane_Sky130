@@ -143,6 +143,33 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
 # Day 4 : Pre-layout timing analysis and importance of good clock tree
 
+- Steps to covert grid info to track info
+   - In magic tool console type ``` grid 0.46um 0.34um 0.23um 0.17um ```
+
+     ![grid on]()
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Day 5 : Final steps for RTL2GDS
 
 
