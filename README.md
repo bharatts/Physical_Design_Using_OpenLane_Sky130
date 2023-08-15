@@ -138,3 +138,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 - Plotted curve
 
 ![image](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/ngspice_plot_day3.jpg)
+
+![rise_fall_time](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/rise_and_fall_trans_delay_day3.jpg)
+
+
