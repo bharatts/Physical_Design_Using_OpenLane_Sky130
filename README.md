@@ -121,7 +121,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
 - After running above commands netlist will be generate and it will look like below image
 
-![]
+![netlist](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/day3_spice_netlist.jpg)
 
 - After using modification to netlist according to tech file which have pmos & nmos model
 
