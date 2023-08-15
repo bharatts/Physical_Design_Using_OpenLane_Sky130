@@ -152,10 +152,15 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
     ![track file](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/track_info_day4.jpg)
   
+  - Giving custom name to cell and saving it and also writing cell file using below commands
+    ```
+    save sky130_vsdinv.mag
+    lef write
+    ```
 
-
-
-
+  ![custom name]()
+  ![lef_write]()
+  ![lef file location]()
 
 
 
