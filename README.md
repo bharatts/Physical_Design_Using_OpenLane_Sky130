@@ -37,12 +37,26 @@ OpenLANE is a completely automated RTL to GDSII flow which embeds in it differen
 ![flow](https://raw.githubusercontent.com/nickson-jose/vsdstdcelldesign/master/Images/openlane.flow.1.png)
 
 ### Invoking Openlane
-![openlane_invoke]()
 
+```
+-> docker
+% ./flow.tcl -interactive
+```
 
+![openlane_invoke](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/invoking_openlane.jpg)
 
+### Design Preparation
+```
+% package require openlane 0.9
+% prep -design picorv32a
+```
+![prpe design](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/design_prep.jpg)
 
-
+### Running Synthesis
+```
+% run_synthesis
+```
+![run_synthesis](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/run_synthesis_day2.jpg)
 
 
 
