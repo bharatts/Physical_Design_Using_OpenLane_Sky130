@@ -58,11 +58,18 @@ OpenLANE is a completely automated RTL to GDSII flow which embeds in it differen
 ```
 ![run_synthesis](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/run_synthesis_day2.jpg)
 
+### Output Directory Structure
+In Output dir we can find all run time logs, report and result associate with each design stage.
+![dir struct](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/run_directory_struct.jpg)
 
+# Day 2 : Understand importance of good floorplan vs bad floorplan and introduction to library cells
 
+### Floorplaning 
+Defining the core area for the macro as well as the cell sites and the tracks (init_fp). Placing the macro input and output ports (ioplacer). Generating the power distribution network (pdn).
 
-
-
-
+```
+% run_floorplan
+```
+![floorplan image](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/run_floorplan_day2.jpg)
 
 
