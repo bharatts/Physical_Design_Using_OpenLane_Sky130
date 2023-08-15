@@ -81,4 +81,18 @@ magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/
 ```
 ![image](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/floorplan_result_day2.jpg)
 
+### Placement
+Performing global placement (RePLace). Perfroming detailed placement to legalize the globally placed components (OpenDP)
+```
+% run_placement
+```
+![run_placement](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/run_placement_day2.jpg)
 
+ - Results
+![placement_result](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/placement_result_day2.jpg)
+
+To open using magic 
+```
+magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read merged_unpadded.lef def picorv32a.placement.def &
+```
+![placement1_result](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/placement1_result_day2.jpg)
