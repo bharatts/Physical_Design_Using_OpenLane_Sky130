@@ -132,4 +132,9 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
   ```
   plot y vs time a
   ```
+![ngspice](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/invoking_ngspice_day3.jpg)
 
+
+- Plotted curve
+
+![image](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/ngspice_plot_day3.jpg)
