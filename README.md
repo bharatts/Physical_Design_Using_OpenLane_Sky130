@@ -110,5 +110,26 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
 ![stdcell](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/vsdstdinv_day3.jpg)
 
+- Steps to extract spice netlist : In magic tool console type below command to generate spice netlist
+  ```
+  extract all
+  ext2spice cthresh 0 rthresh 0
+  ext2spice
+  ```
 
+  ![command_netlist](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/extract_all_day3.jpg)
+
+- After running above commands netlist will be generate and it will look like below image
+
+![]
+
+- After using modification to netlist according to tech file which have pmos & nmos model
+
+  
+![modifidy_netlist](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/spice_file.jpg)
+  
+- Invoking ngspice to transient analysis, also to get fall,rise transition time and cell rise,fall delay by plotting input and output using
+  ```
+  plot y vs time a
+  ```
 
