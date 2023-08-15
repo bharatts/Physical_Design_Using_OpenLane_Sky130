@@ -72,4 +72,8 @@ Defining the core area for the macro as well as the cell sites and the tracks (i
 ```
 ![floorplan image](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/run_floorplan_day2.jpg)
 
+- Results
+![image](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/Screenshot%202023-08-15%20191957day2_floorplan.jpg)
+![image](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/floorplan_result_day2.jpg)
+
 
