@@ -171,8 +171,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
   ![copying](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/day4_copying_lef_tech_file_from_vsdcell%20to%20design_src.jpg)
 
-
-
+ 
 
 
 
