@@ -96,3 +96,17 @@ To open using magic
 magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read merged_unpadded.lef def picorv32a.placement.def &
 ```
 ![placement1_result](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/placement1_result_day2.jpg)
+
+
+# Day 3 : Design and characterize one library cell using Magic Layout tool and ngspice
+
+The goal of the project is to design a single height standard cell and plug this custom cell into a more complex design and perform it's PnR in the openlane flow. The standard cell chosen is a basic CMOS inverter and the design into which it's plugged into is a pre-built picorv32a core.
+
+So, we will clone the stdcell repo using this command ``` git clone https://github.com/nickson-jose/vsdstdcelldesign ``` at the openlane directory.
+Next step is copy tech file (sky130A.tech) which is present at the pdks directory under libs.tech to the clone directory 
+
+next is to open magic tool to see stdcell design 
+``` magic -T sky130A.tech sky130_inv.mag ```
+![stdcell]()
+
+
