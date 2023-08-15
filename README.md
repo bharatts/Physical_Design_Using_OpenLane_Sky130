@@ -123,7 +123,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
 ![netlist](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/day3_spice_netlist.jpg)
 
-- After using modification to netlist according to tech file which have pmos & nmos model
+- After modifying to netlist according to tech file which have pmos & nmos model
 
   
 ![modifidy_netlist](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/spice_file.jpg)
