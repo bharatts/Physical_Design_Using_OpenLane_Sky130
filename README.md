@@ -162,7 +162,8 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
   ![lef_write](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/lef_write_day4.jpg)
   ![lef file location](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/day4_lef_file.jpg)
 
-
+  - lef file
+  ![lef_file]()
 
 
 
