@@ -184,7 +184,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     add_lefs -src $lefs
     run_synthesis
     ```
-    ![run_synthesis]()
+    ![run_synthesis](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/synth_run.jpg)
 
     - Run floorplan if it is failed then type below commands in order
     ```
@@ -194,9 +194,9 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     tap_decap_or
     run_placement
     ```
-    ![Placement run]()
-    ![Placement result]()
-    ![Placement run1]()
+    ![Placement run](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/run_placement.jpg)
+    ![Placement result](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/placement_result.jpg)
+    ![Placement run1](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/placement_result_cell_confirm.jpg)
 
     - Creating a new SDC constraint file
 
