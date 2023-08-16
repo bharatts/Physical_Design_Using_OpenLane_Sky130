@@ -229,7 +229,8 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
         write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis.v
         ```
 
-        
+       we can confirm the replace cell in netlist
+      ![cell change](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/confirming_cell_changed_in_netlist.jpg)
       - Run floorplan and placement stage after synthesis netlist is saved
         ```
         init_floorplan
@@ -276,8 +277,9 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
   ![cts_value](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/cts_defulat_value_commands.jpg)
   ![post_cts_timing_analysis](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/post_cts_timing_analysis.jpg)
 
-
-
+  - Now exit the openroad, type ```exit```
+    
+  
 
 
 
