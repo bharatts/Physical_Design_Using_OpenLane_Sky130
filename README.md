@@ -218,10 +218,19 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
       We can improve slack by changing the size of the stdcell       
       ![changing_size](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/changing%20cell%20size%20to%20improve%20slack.jpg)
+   
+      To check report after increasing cell size ``` report_checks -fields {net cap slew input_pins} -digits 4 ```
 
-      
+      Result - slack improved by some factor
+      ![impproved slack](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/improved_slack.jpg)
 
+      - Next steps is to update the synthesis netlist type this command in OpenSTA Terminal
+        ```
+        write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis.v
+        ```
 
+        
+       
 
 
 
