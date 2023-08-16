@@ -279,9 +279,15 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
   - Now exit the openroad, type ```exit```
     
-  
-
-
+  - using typical lib, timing analysis will be done
+    ```
+    ```
+    - ```exit``` openroad
+  - Removing the clk_buf and adding them again to see the timing report and impact it has on slack
+    ```
+    ```
+    cts stage will failed so we have to update current_def file and run again cts stage
+  - invoke openroad again and type these following cmds
 
 
 
