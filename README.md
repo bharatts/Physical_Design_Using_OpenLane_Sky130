@@ -248,6 +248,22 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
 # Day 5 : Final steps for RTL2GDS
 
+ - Generating Power Delivery Network (pdn)
+   ``` gen_pdn ```
+
+   ![pdn](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/gen_dpn.jpg)
+
+- Invoking TritonRoute tool for routing
+  ``` run_routing``` after generating power delivery network
+
+  ![rounting](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/run_routing.jpg)
+
+  Tool generate a png file in results/routing/picorv32a.def.png
+  ![tool png](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/routing.jpg)
+
+  Result from magic tool
+
+  ![magic_routin](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/routing_magic.jpg)
 
 # ACKNOWLEDGEMENT
 - Kunal Ghosh, Co-founder, VSD Corp. Pvt. Ltd.
