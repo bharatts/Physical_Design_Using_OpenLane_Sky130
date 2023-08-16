@@ -290,6 +290,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     set_propagated_clock [all_clocks]
     report_checks -path_delay min_max -format full_clock_expanded -digits 4
     ```
+    ![cts typical](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/post_cts_timing_analysis_tpyical.jpg)
     - ```exit``` openroad
   - Removing the clk_buf and to see the timing report and impact it has on slack
     ```
@@ -299,8 +300,8 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     set ::env(CTS_CLK_BUFFER_LIST) [lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0]
     echo $::env(CTS_CLK_BUFFER_LIST)
     run_cts
-
     ```
+    ![clk buf remove](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/cts_buf_cell_chnage.jpg)
     cts stage will failed so we have to update current_def file and run again cts stage
   - Updating CURRENT DEF file so, type these following cmds
     ```
@@ -332,7 +333,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky_fd_sc_hd__clkbuf_1]
 
     ```
-
+  ![clk buf added](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/again_added_clk_buf.jpg)
 
 # Day 5 : Final steps for RTL2GDS
 
