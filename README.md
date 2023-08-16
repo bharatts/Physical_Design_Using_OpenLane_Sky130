@@ -171,11 +171,36 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
   ![copying](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/day4_copying_lef_tech_file_from_vsdcell%20to%20design_src.jpg)
 
- 
+  - Modify design.picorv32a.conf.tcl
+  ![conf.tcl](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/day4_conf_tcl_file.jpg)
 
+  - In terminal type following commands
+    ```
+    docker
+    ./flow -interactive
+    package require openLANE 0.9
+    prep -design picorv32a -tag 12-08_20-54 -overwrite
+    set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+    add_lefs -src $lefs
+    run_synthesis
+    ```
+    ![run_synthesis]()
 
+    - Run floorplan if it is failed then type below commands in order
+    ```
+    init_floorplan
+    place_io
+    global_placement_or
+    tap_decap_or
+    run_placement
+    ```
+    ![Placement run]()
+    ![Placement result]()
+    ![Placement run1]()
 
-
+    - Creating a new SDC constraint file for timing analysis
+   
+      
 
 
 
