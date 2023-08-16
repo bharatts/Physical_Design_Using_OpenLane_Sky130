@@ -198,11 +198,16 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     ![Placement result]()
     ![Placement run1]()
 
-    - Creating a new SDC constraint file for timing analysis
-   
-      
+    - Creating a new SDC constraint file
 
+     ![sdc file]()
 
+    - Creating a new pre_sta conf file for timing analysis
+
+      ![pre_conf file]()
+
+    - Invoking OpenSTA for analysis using ``` sta pre_sta.conf ```
+      ![sta result]()
 
 
 
