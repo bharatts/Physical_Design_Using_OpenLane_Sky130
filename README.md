@@ -216,8 +216,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
       set ::env(SYNTH_STRATEGY) "DELAY 0"
       ```
 
-      We can improve slack by changing the size of the stdcell we improve the driving strength
-      
+      We can improve slack by changing the size of the stdcell       
       ![changing_size](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/changing%20cell%20size%20to%20improve%20slack.jpg)
 
       
