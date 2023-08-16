@@ -291,7 +291,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     report_checks -path_delay min_max -format full_clock_expanded -digits 4
     ```
     - ```exit``` openroad
-  - Removing the clk_buf and adding them again to see the timing report and impact it has on slack
+  - Removing the clk_buf and to see the timing report and impact it has on slack
     ```
     echo $::env(CTS_CLK_BUFFER_LIST)
     lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0
@@ -302,7 +302,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
     ```
     cts stage will failed so we have to update current_def file and run again cts stage
-  - invoke openroad again and type these following cmds
+  - Updating CURRENT DEF file so, type these following cmds
     ```
     echo $::env(CURRENT_DEF)
     set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/placement/picorv32a.placement.def 
@@ -311,7 +311,9 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     run_cts
 
     ```
-
+ - Invoke OpenRoad
+   ```
+   ```
 
 
 
