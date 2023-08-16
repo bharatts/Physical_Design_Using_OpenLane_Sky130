@@ -248,9 +248,12 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
         echo $::env(CTS_MAX_CAP)
        ```
 
+       ![default value](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/cts_defulat_value.jpg)
+       
 
-
-
+  - OpenRoad , to invoke openroad type ``` openroad ``` in terminal and type these following commands
+    ```
+    ```
 
 
 
