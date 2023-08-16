@@ -200,14 +200,14 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
     - Creating a new SDC constraint file
 
-     ![sdc file]()
+     ![sdc file](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/sdc_file.jpg)
 
     - Creating a new pre_sta conf file for timing analysis
 
-      ![pre_conf file]()
+      ![pre_conf file](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/pre_sta_conf%20file.jpg)
 
     - Invoking OpenSTA for analysis using ``` sta pre_sta.conf ```
-      ![sta result]()
+      ![sta result](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/sta_result.jpg)
 
 
 
