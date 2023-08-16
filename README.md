@@ -209,6 +209,32 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     - Invoking OpenSTA for analysis using ``` sta pre_sta.conf ```
       ![sta result](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/sta_result.jpg)
 
+    - To improve slack we can use trade of between delay and area, openlane have configuration paarameter which are mentioned in REAMME>md
+      ```
+      set ::env(SYNTH_SIZING) 1
+      set ::env(SYNTH_MAX_FANOUT) 4
+      set ::env(SYNTH_STRATEGY) "DELAY 0"
+      ```
+
+      We can improve slack by changing the size of the stdcell we improve the driving strength
+      
+      ![changing_size](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/changing%20cell%20size%20to%20improve%20slack.jpg)
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
