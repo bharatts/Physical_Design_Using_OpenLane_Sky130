@@ -230,8 +230,18 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
         ```
 
         
-       
+      - Run floorplan and placement stage after synthesis netlist is saved
+        ```
+        init_floorplan
+        place_io
+        global_placement_or
+        tap_decap_or
+        run_placement
+        ```
 
+     - Check the default parameters type below commands
+       ```
+       ```
 
 
 
