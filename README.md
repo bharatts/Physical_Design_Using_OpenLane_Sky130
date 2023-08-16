@@ -281,13 +281,36 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     
   - using typical lib, timing analysis will be done
     ```
+    openroad
+    read_db pico_cts.db
+    read_verilog /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis_cts.v
+    read_liberty $::env(LIB_SYNTH_COMPLETE)
+    link_design picorv32a
+    read_verilog /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis_cts.v
+    set_propagated_clock [all_clocks]
+    report_checks -path_delay min_max -format full_clock_expanded -digits 4
     ```
     - ```exit``` openroad
   - Removing the clk_buf and adding them again to see the timing report and impact it has on slack
     ```
+    echo $::env(CTS_CLK_BUFFER_LIST)
+    lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0
+    echo $::env(CTS_CLK_BUFFER_LIST)
+    set ::env(CTS_CLK_BUFFER_LIST) [lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0]
+    echo $::env(CTS_CLK_BUFFER_LIST)
+    run_cts
+
     ```
     cts stage will failed so we have to update current_def file and run again cts stage
   - invoke openroad again and type these following cmds
+    ```
+    echo $::env(CURRENT_DEF)
+    set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/placement/picorv32a.placement.def 
+    echo $::env(CURRENT_DEF)
+    echo $::env(CTS_CLK_BUFFER_LIST)
+    run_cts
+
+    ```
 
 
 
