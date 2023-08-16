@@ -209,7 +209,7 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     - Invoking OpenSTA for analysis using ``` sta pre_sta.conf ```
       ![sta result](https://github.com/bharatts/Physical_Design_Using_OpenLane_Sky130/blob/main/images/sta_result.jpg)
 
-    - To improve slack we can use trade of between delay and area, openlane have configuration paarameter which are mentioned in REAMME>md
+    - To improve slack we can use trade of between delay and area, openlane have configuration paarameter which are mentioned in README.md
       ```
       set ::env(SYNTH_SIZING) 1
       set ::env(SYNTH_MAX_FANOUT) 4
