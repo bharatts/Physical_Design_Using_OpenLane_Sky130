@@ -1,0 +1,125 @@
+package require openlane 0.9
+
+prep -design picorv32a -tag nosynthcmds
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+
+add_lefs -src $lefs
+
+echo $::env(SYNTH_STRATEGY)
+echo $::env(SYNTH_BUFFERING)
+echo $::env(SYNTH_SIZING)
+
+run_synthesis
+
+init_floorplan
+place_io
+global_placement_or
+tap_decap_or
+run_placement
+
+magic -T ~/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read tmp//merged.lef def read results/placement/picorv32a.placement.def &
+
+sta pre_sta.conf
+
+set ::env(SYNTH_SIZING) 1
+set ::env(SYNTH_MAX_FANOUT) 4
+
+run_syn
+
+report_net -connection _11643_
+replace _14481_ sky130_fd_sc_hd__or4_4
+replace _15220_ sky130_fd_sc_hd__or2_4
+replace _15186_ sky130_fd_sc_hd__or2_4
+replace _15216_ sky130_fd_sc_hd__or2_4
+replace _14513_ sky130_fd_sc_hd__or2_4
+replace _15174_ sky130_fd_sc_hd__or2_4
+replace _15180_ sky130_fd_sc_hd__or2_4
+replace _14514_ sky130_fd_sc_hd__or3_4
+replace _14510_ sky130_fd_sc_hd__or3_4
+replace _15167_ sky130_fd_sc_hd__or3_4
+replace _15166_ sky130_fd_sc_hd__or2_4
+replace _15226_ sky130_fd_sc_hd__or2_4
+replace _15217_ sky130_fd_sc_hd__or2_4
+
+report_checks -fields {net cap slew input_pins} -digits 4
+
+report_checks -from _29347_ -to _30440_ -through _15216_
+
+
+
+write_verilog /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis.v
+
+run_floorplan
+run_placement
+
+run_cts
+
+echo $::env(LIB_SYNTH_COMPLETE)
+echo $::env(LIB_TYPICAL)
+
+echo $::env(CURRENT_DEF)
+echo $::env(SYNTH_MAX_TRAN)
+echo $::env(CTS_MAX_CAP)
+
+
+openroad
+read_lef /openLANE_flow/designs/picorv32a/runs/nosynthcmds/tmp/merged.lef
+read_def /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/cts/picorv32a.cts.def
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis_cts.v
+
+read_liberty -max $::env(LIB_SLOWEST)
+read_liberty -min $::env(LIB_FASTEST)
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+set_propagated_clock [all_clocks]
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+
+exit
+
+openroad
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+link_design picorv32a
+read_verilog /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis_cts.v
+set_propagated_clock [all_clocks]
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+
+exit
+echo $::env(CTS_CLK_BUFFER_LIST)
+lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0
+echo $::env(CTS_CLK_BUFFER_LIST)
+set ::env(CTS_CLK_BUFFER_LIST) [lreplace $::env(CTS_CLK_BUFFER_LIST) 0 0]
+echo $::env(CTS_CLK_BUFFER_LIST)
+run_cts
+
+echo $::env(CURRENT_DEF)
+set ::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/placement/picorv32a.placement.def
+echo $::env(CURRENT_DEF)
+echo $::env(CTS_CLK_BUFFER_LIST)
+run_cts
+
+openroad
+read_lef /openLANE_flow/designs/picorv32a/runs/nosynthcmds/tmp/merged.lef
+read_def /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/cts/picorv32a.cts.def
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty $::env(LIB_SYNTH_COMPLETE)
+link_design picorv32a
+read_verilog /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis_cts.v
+set_propagated_clock [all_clocks]
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+
+
+report_clock_skew -setup
+exit
+
+echo $::env(CTS_CLK_BUFFER_LIST)
+set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky_fd_sc_hd__clkbuf_1]
+
+gen_pdn
+echo $::env(ROUTING_STRATEGY)
+run_routing
+
