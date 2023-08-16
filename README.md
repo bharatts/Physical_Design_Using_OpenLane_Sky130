@@ -241,6 +241,11 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
 
      - Check the default parameters type below commands
        ```
+        echo $::env(LIB_SYNTH_COMPLETE)
+        echo $::env(LIB_TYPICAL)
+        echo $::env(CURRENT_DEF)
+        echo $::env(SYNTH_MAX_TRAN)
+        echo $::env(CTS_MAX_CAP)
        ```
 
 
