@@ -313,8 +313,25 @@ Next step is copy tech file (sky130A.tech) which is present at the pdks director
     ```
  - Invoke OpenRoad
    ```
-   ```
+    openroad
+    read_lef /openLANE_flow/designs/picorv32a/runs/nosynthcmds/tmp/merged.lef
+    read_def /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/cts/picorv32a.cts.def
+    write_db pico_cts.db
+    read_db pico_cts.db
+    read_verilog /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis_cts.v
+    read_liberty $::env(LIB_SYNTH_COMPLETE)
+    link_design picorv32a
+    read_verilog /openLANE_flow/designs/picorv32a/runs/nosynthcmds/results/synthesis/picorv32a.synthesis_cts.v
+    set_propagated_clock [all_clocks]
+    report_checks -path_delay min_max -format full_clock_expanded -digits 4
 
+   ```
+  - ```exit``` openroad and adding again clk_buf
+    ```
+    echo $::env(CTS_CLK_BUFFER_LIST)
+    set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky_fd_sc_hd__clkbuf_1]
+
+    ```
 
 
 # Day 5 : Final steps for RTL2GDS
